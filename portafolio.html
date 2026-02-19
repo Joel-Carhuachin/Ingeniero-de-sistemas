@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Tu Nombre</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/portafolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">TU NOMBRE</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="sobre-mi.html" class="nav-link">Sobre Mí</a></li>
+                <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+                <li><a href="portafolio.html" class="nav-link active">Portafolio</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Portfolio Hero -->
+    <section class="portfolio-hero">
+        <div class="container">
+            <h1 class="page-title">Portafolio</h1>
+            <p class="page-subtitle">Explora mis proyectos y trabajos recientes</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="web">Desarrollo Web</button>
+                <button class="filter-btn" data-filter="data">Análisis de Datos</button>
+                <button class="filter-btn" data-filter="design">Diseño UX/UI</button>
+                <button class="filter-btn" data-filter="mobile">Aplicaciones Móviles</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="portfolio-section">
+        <div class="container">
+            <div class="portfolio-grid">
+                <!-- Project 1 -->
+                <a href="proyectos/proyecto-1.html" class="portfolio-card" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="img/proyectos/proyecto1.jpg" alt="E-commerce Platform">
+                        <div class="portfolio-overlay">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>E-commerce Platform</h3>
+                        <p class="portfolio-category">Desarrollo Web</p>
+                        <p class="portfolio-description">Plataforma de comercio electrónico completa con carrito de compras y pasarela de pago.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 2 -->
+                <a href="proyectos/proyecto-2.html" class="portfolio-card" data-category="data">
+                    <div class="portfolio-image">
+                        <img src="img/proyectos/proyecto2.jpg" alt="Dashboard Analytics">
+                        <div class="portfolio-overlay">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Dashboard Analytics</h3>
+                        <p class="portfolio-category">Análisis de Datos</p>
+                        <p class="portfolio-description">Dashboard interactivo para visualización de métricas de negocio en tiempo real.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">D3.js</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 3 -->
+                <a href="proyectos/proyecto-3.html" class="portfolio-card" data-category="design">
+                    <div class="portfolio-image">
+                        <img src="img/proyectos/proyecto3.jpg" alt="Mobile App Design">
+                        <div class="portfolio-overlay">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Mobile App Design</h3>
+                        <p class="portfolio-category">Diseño UX/UI</p>
+                        <p class="portfolio-description">Rediseño completo de aplicación móvil enfocado en mejorar la experiencia del usuario.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Figma</span>
+                            <span class="tag">UX Research</span>
+                            <span class="tag">Prototyping</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 4 -->
+                <a href="proyectos/proyecto-4.html" class="portfolio-card" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="img/proyectos/proyecto4.jpg" alt="Corporate Website">
+                        <div class="portfolio-overlay">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Corporate Website</h3>
+                        <p class="portfolio-category">Desarrollo Web</p>
+                        <p class="portfolio-description">Sitio web corporativo con CMS personalizado y optimización SEO avanzada.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">WordPress</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">SEO</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 5 -->
+                <a href="proyectos/proyecto-5.html" class="portfolio-card" data-category="mobile">
+                    <div class="portfolio-image">
+                        <img src="img/proyectos/proyecto5.jpg" alt="Fitness App">
+                        <div class="portfolio-overlay">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Fitness Tracking App</h3>
+                        <p class="portfolio-category">Aplicación Móvil</p>
+                        <p class="portfolio-description">App móvil para seguimiento de ejercicios y nutrición con sincronización en la nube.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">API REST</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 6 -->
+                <a href="proyectos/proyecto-6.html" class="portfolio-card" data-category="data">
+                    <div class="portfolio-image">
+                        <img src="img/proyectos/proyecto6.jpg" alt="Data Visualization">
+                        <div class="portfolio-overlay">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>COVID-19 Data Visualization</h3>
+                        <p class="portfolio-category">Análisis de Datos</p>
+                        <p class="portfolio-description">Visualización interactiva de datos de COVID-19 con mapas y gráficos dinámicos.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Plotly</span>
+                            <span class="tag">Pandas</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Tienes un proyecto en mente?</h2>
+            <p>Hablemos sobre cómo puedo ayudarte a hacerlo realidad</p>
+            <a href="contacto.html" class="btn btn-primary">Iniciar Conversación</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Tu Nombre. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioCards = document.querySelectorAll('.portfolio-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                portfolioCards.forEach(card => {
+                    if (filterValue === 'all') {
+                        card.style.display = 'block';
+                    } else {
+                        if (card.getAttribute('data-category') === filterValue) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
