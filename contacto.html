@@ -86,7 +86,7 @@
                                 <i class="fab fa-github"></i>
                                 <span>GitHub</span>
                             </a>
-                            <a href="https://www.linkedin.com/in/anthony-joel-carhuachin-calixto-a42b561aa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-link">
+                            <a href="https://www.linkedin.com/in/anthony-joel-carhuachin-calixto-a42b561aa/" target="_blank" class="social-link">
                                 <i class="fab fa-linkedin"></i>
                                 <span>LinkedIn</span>
                             </a>
@@ -105,20 +105,20 @@
                 <!-- Contact Form -->
                 <div class="contact-form-wrapper">
                     <h2>Envíame un mensaje</h2>
-                    <form class="contact-form" id="contactForm">
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xaqdpokn" method="POST">
                         <div class="form-group">
                             <label for="name">Nombre completo *</label>
                             <input type="text" id="name" name="name" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="email">Email *</label>
+                            <label for="email">Email</label>
                             <input type="email" id="email" name="email" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="phone">Teléfono</label>
-                            <input type="tel" id="phone" name="phone">
+                            <label for="phone">Teléfono *</label>
+                            <input type="number" id="phone" name="phone">
                         </div>
 
                         <div class="form-group">
@@ -130,13 +130,10 @@
                             <label for="service">Servicio de interés</label>
                             <select id="service" name="service">
                                 <option value="">Selecciona un servicio</option>
-                                <option value="web">Desarrollo Web</option>
-                                <option value="data">Análisis de Datos</option>
-                                <option value="design">Diseño UX/UI</option>
-                                <option value="mobile">Aplicación Móvil</option>
-                                <option value="backend">Backend & APIs</option>
-                                <option value="consulting">Consultoría</option>
-                                <option value="other">Otro</option>
+                                <option value="Desarrollo Web">Desarrollo Web</option>
+                                <option value="Análisis de Datos">Análisis de Datos</option>
+                                <option value="Automatización">Automatización</option>
+                                <option value="Otro">Otro</option>
                             </select>
                         </div>
 
@@ -159,22 +156,22 @@
         <div class="container">
             <h2>Contacto Rápido</h2>
             <div class="quick-contact-grid">
-                <a href="mailto:tuemail@ejemplo.com" class="quick-contact-card">
+                <a href="mailto:anthonyjoel170201@gmail.com" class="quick-contact-card">
                     <i class="fas fa-envelope"></i>
                     <h3>Email</h3>
                     <p>Envíame un correo</p>
                 </a>
-                <a href="https://wa.me/1234567890" target="_blank" class="quick-contact-card">
+                <a href="https://wa.link/4by034" target="_blank" class="quick-contact-card">
                     <i class="fab fa-whatsapp"></i>
                     <h3>WhatsApp</h3>
                     <p>Chatea conmigo</p>
                 </a>
-                <a href="https://linkedin.com/in/tuusuario" target="_blank" class="quick-contact-card">
+                <a href="https://www.linkedin.com/in/anthony-joel-carhuachin-calixto-a42b561aa/" target="_blank" class="quick-contact-card">
                     <i class="fab fa-linkedin"></i>
                     <h3>LinkedIn</h3>
                     <p>Conecta conmigo</p>
                 </a>
-                <a href="https://github.com/tuusuario" target="_blank" class="quick-contact-card">
+                <a href="https://github.com/Joel-Carhuachin" target="_blank" class="quick-contact-card">
                     <i class="fab fa-github"></i>
                     <h3>GitHub</h3>
                     <p>Ve mi código</p>
@@ -191,22 +188,58 @@
     </footer>
 
     <script src="js/main.js"></script>
-    <script>
-        // Form submission handler
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+<script>
+    // Form submission handler - VERSIÓN CORREGIDA
+    const contactForm = document.getElementById('contactForm');
+
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        
+        // Estado de carga
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+        submitBtn.disabled = true;
+        
+        try {
+            const response = await fetch(this.action, {
+                method: 'POST',
+                body: new FormData(this),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
             
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
+            if (response.ok) {
+                // ✅ Éxito
+                submitBtn.innerHTML = '<i class="fas fa-check"></i> ¡Enviado!';
+                submitBtn.style.backgroundColor = '#28a745';
+                this.reset();
+                
+                setTimeout(() => {
+                    alert('¡Gracias por tu mensaje! Te responderé pronto.');
+                }, 300);
+                
+            } else {
+                throw new Error('Error del servidor');
+            }
             
-            // Here you would typically send the data to a server
-            // For now, we'll just show an alert
-            alert('¡Gracias por tu mensaje! Te responderé pronto.');
-            
-            // Reset form
-            this.reset();
-        });
-    </script>
+        } catch (error) {
+            //Error
+            submitBtn.innerHTML = '<i class="fas fa-times"></i> Error';
+            submitBtn.style.backgroundColor = '#dc3545';
+            alert('Hubo un problema al enviar. Intenta de nuevo o contáctame por WhatsApp.');
+        }
+        
+        // Restaurar botón después de 3 segundos
+        setTimeout(() => {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+            submitBtn.style.backgroundColor = '';
+        }, 3000);
+    });
+</script>
+
 </body>
 </html>
