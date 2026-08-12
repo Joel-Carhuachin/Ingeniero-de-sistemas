@@ -1,7 +1,7 @@
 // ===================================
 // NAVEGACIÓN MÓVIL
-// este es un comentario en main
-// ===================================
+// comentario de prueba 
+ // ===================================
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
