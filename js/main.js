@@ -1,5 +1,6 @@
 // ===================================
 // NAVEGACIÓN MÓVIL
+// comentario de prueba 
 // ===================================
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
