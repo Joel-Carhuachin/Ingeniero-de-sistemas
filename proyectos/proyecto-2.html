@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión Documental y Grafos | Joel CARHUACHIN</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/proyecto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <img src="../img/LOGO.png" width="120" alt="Joel CARHUACHIN">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../sobre-mi.html" class="nav-link">Sobre Mí</a></li>
+                <li><a href="../servicios.html" class="nav-link">Servicios</a></li>
+                <li><a href="../portafolio.html" class="nav-link active">Portafolio</a></li>
+                <li><a href="../contacto.html" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="project-header">
+        <div class="container">
+            <a href="../portafolio.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Volver al Portafolio
+            </a>
+            <h1 class="project-title">Sistema Inteligente de Gestión Documental con Sincronización a Grafo de Conocimiento</h1>
+            <p class="project-subtitle">Estandarización, versionado y gobernanza documental conectados con la inteligencia de la organización.</p>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <i class="fas fa-folder-tree"></i>
+                    <span>Gestión documental</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-share-nodes"></i>
+                    <span>GraphRAG &amp; Neo4j</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-hero-image">
+        <div class="container">
+            <img src="../img/Gestion-archivos.png" alt="Sistema de Gestión Documental para archivos corporativos">
+        </div>
+    </section>
+
+    <section class="project-content">
+        <div class="container">
+            <div class="project-main">
+                <div class="content-section">
+                    <h2>Resumen Ejecutivo</h2>
+                    <p>
+                        Plataforma web integral diseñada para estandarizar, versionar y gobernar
+                        archivos corporativos mediante plantillas de carpetas jerárquicas.
+                        Está conectada directamente con un Grafo de Conocimiento para mantener
+                        actualizada la base de inteligencia artificial de la organización en tiempo real.
+                    </p>
+                </div>
+
+                <div class="content-section">
+                    <h2>El Problema</h2>
+                    <p>
+                        Cuando múltiples equipos gestionan documentos sin una estructura estándar,
+                        surgen problemas críticos de organización y confiabilidad de los datos.
+                    </p>
+                    <ul>
+                        <li>Desorden y duplicidad de carpetas creadas bajo criterios distintos.</li>
+                        <li>Pérdida de trazabilidad sobre cuál es la versión final o aprobada de un archivo.</li>
+                        <li>Desconexión entre los repositorios de archivos y las herramientas de consulta inteligente o análisis de datos.</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h2>Funcionalidades Principales</h2>
+                    <div class="features-grid">
+                        <article class="feature-item">
+                            <i class="fas fa-sitemap"></i>
+                            <h3>Plantillas jerárquicas</h3>
+                            <p>Diseño y reutilización de estructuras predefinidas de carpetas y subcarpetas para nuevos proyectos o áreas.</p>
+                        </article>
+                        <article class="feature-item">
+                            <i class="fas fa-code-branch"></i>
+                            <h3>Control de versiones</h3>
+                            <p>Historial de actualizaciones de cada documento, trazabilidad de cambios y prevención de sobrescrituras accidentales.</p>
+                        </article>
+                        <article class="feature-item">
+                            <i class="fas fa-circle-check"></i>
+                            <h3>Flujo de aprobación</h3>
+                            <p>Validación y aprobación de estructuras creadas antes de su uso oficial para garantizar la gobernanza documental.</p>
+                        </article>
+                        <article class="feature-item">
+                            <i class="fas fa-arrows-rotate"></i>
+                            <h3>Sincronización con Neo4j</h3>
+                            <p>La carga o actualización de un archivo activa su ingesta automática en el pipeline GraphRAG y Neo4j.</p>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>Arquitectura de la Solución</h2>
+                    <p>
+                        Aplicación web desacoplada con frontend interactivo y backend robusto para
+                        gestionar archivos, metadatos, reglas de negocio e integraciones externas.
+                        El backend comunica cada operación confirmada con el motor de ingesta del
+                        Grafo de Conocimiento.
+                    </p>
+                </div>
+
+                <div class="content-section">
+                    <h2>Cómo Funciona</h2>
+                    <ol class="project-flow">
+                        <li><strong>Estandarización:</strong> Se crea o selecciona una plantilla de carpetas y subcarpetas validada.</li>
+                        <li><strong>Carga y versionado:</strong> Los usuarios suben documentos dentro de la estructura asignada y el sistema registra nuevas versiones.</li>
+                        <li><strong>Sincronización inteligente:</strong> El backend envía el documento confirmado al pipeline del Grafo de Conocimiento.</li>
+                        <li><strong>Disponibilidad inmediata:</strong> El contenido queda indexado y disponible para consultas del asistente conversacional con IA.</li>
+                    </ol>
+                </div>
+
+                <div class="content-section">
+                    <h2>Impacto y Beneficios</h2>
+                    <ul>
+                        <li><strong>Orden y estandarización:</strong> Los proyectos y áreas operan bajo estructuras uniformes y validadas.</li>
+                        <li><strong>Gobernanza y confiabilidad:</strong> Las versiones y aprobaciones aseguran que solo información íntegra llegue a los sistemas de IA y análisis.</li>
+                        <li><strong>Automatización de ingesta:</strong> Subir un archivo al gestor actualiza automáticamente el conocimiento disponible en la organización.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <aside class="project-sidebar">
+                <div class="sidebar-section">
+                    <h3>Información del Proyecto</h3>
+                    <div class="info-item">
+                        <strong>Categoría:</strong>
+                        <span>Gestión documental</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Tipo:</strong>
+                        <span>DMS / Gobernanza</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Estado:</strong>
+                        <span>Implementado</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Tecnologías Utilizadas</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">Neo4j</span>
+                        <span class="tech-tag">GraphRAG</span>
+                        <span class="tech-tag">Backend</span>
+                        <span class="tech-tag">Frontend</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <section class="related-projects">
+        <div class="container">
+            <h2>Proyectos Relacionados</h2>
+            <div class="related-grid">
+                <a href="proyecto-1.html" class="related-card">
+                    <img src="../img/graphrag.png" alt="Asistente Inteligente GraphRAG">
+                    <h3>Asistente Inteligente GraphRAG</h3>
+                </a>
+                <a href="proyecto-3.html" class="related-card">
+                    <img src="../img/proyectos/proyecto3.jpg" alt="Página Web Psicóloga">
+                    <h3>Página Web Psicóloga</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-cta">
+        <div class="container">
+            <h2>¿Interesado en trabajar juntos?</h2>
+            <a href="../contacto.html" class="btn btn-primary">Contactar</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Joel CARHUACHIN. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

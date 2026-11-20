@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistente GraphRAG | Joel CARHUACHIN</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/proyecto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <img src="../img/LOGO.png" width="120" alt="Joel CARHUACHIN">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../sobre-mi.html" class="nav-link">Sobre Mí</a></li>
+                <li><a href="../servicios.html" class="nav-link">Servicios</a></li>
+                <li><a href="../portafolio.html" class="nav-link active">Portafolio</a></li>
+                <li><a href="../contacto.html" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="project-header">
+        <div class="container">
+            <a href="../portafolio.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Volver al Portafolio
+            </a>
+            <h1 class="project-title">Asistente Inteligente de Conocimiento Corporativo basado en GraphRAG</h1>
+            <p class="project-subtitle">Centralización, conexión y consulta de conocimiento empresarial mediante inteligencia artificial y lenguaje natural.</p>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <i class="fas fa-diagram-project"></i>
+                    <span>IA &amp; Grafos de Conocimiento</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-database"></i>
+                    <span>Arquitectura de datos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-hero-image">
+        <div class="container">
+            <img src="../img/graphrag.png" alt="Arquitectura del proyecto de conocimiento corporativo basado en GraphRAG">
+        </div>
+    </section>
+
+    <section class="project-content">
+        <div class="container">
+            <div class="project-main">
+                <div class="content-section">
+                    <h2>Resumen Ejecutivo</h2>
+                    <p>
+                        Plataforma de inteligencia artificial de extremo a extremo que centraliza,
+                        estructura y conecta información dispersa en múltiples formatos y directorios.
+                        Permite consultar documentos, ubicaciones de archivos y resúmenes de reuniones
+                        mediante lenguaje natural.
+                    </p>
+                </div>
+
+                <div class="content-section">
+                    <h2>El Problema</h2>
+                    <p>
+                        En entornos con alto volumen operativo, la información crítica se encuentra
+                        fragmentada en cientos de archivos distribuidos en múltiples carpetas y subcarpetas.
+                    </p>
+                    <ul>
+                        <li>Pérdida de tiempo buscando dónde está ubicado un archivo específico.</li>
+                        <li>Dificultad para cruzar información entre distintos documentos o áreas.</li>
+                        <li>Conocimiento aislado en formatos no estructurados como capturas, imágenes o transcripciones de reuniones.</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h2>Arquitectura de la Solución</h2>
+                    <p>
+                        Se diseñó e implementó una arquitectura de datos e IA que ingiere documentos
+                        heterogéneos, procesa la información bajo estándares de calidad y construye
+                        un grafo de conocimiento conectado a un chat con IA basado en GraphRAG.
+                    </p>
+                    <div class="features-grid">
+                        <article class="feature-item">
+                            <i class="fas fa-layer-group"></i>
+                            <h3>Arquitectura Medallion</h3>
+                            <p>Procesamiento en capas Bronze, Silver y Gold con Python para asegurar limpieza, trazabilidad y calidad antes de la indexación.</p>
+                        </article>
+                        <article class="feature-item">
+                            <i class="fas fa-file-image"></i>
+                            <h3>Extracción Multimodal</h3>
+                            <p>Claude Haiku para OCR inteligente y DuckDB para consultar datos tabulares y archivos Excel de alto rendimiento.</p>
+                        </article>
+                        <article class="feature-item">
+                            <i class="fas fa-project-diagram"></i>
+                            <h3>Grafo de Conocimiento</h3>
+                            <p>Voyage AI genera embeddings y Graphiti modela entidades y relaciones persistidas en Neo4j.</p>
+                        </article>
+                        <article class="feature-item">
+                            <i class="fas fa-comments"></i>
+                            <h3>Chat Inteligente</h3>
+                            <p>Aplicación web con backend en TypeScript y frontend en HTML que utiliza Claude Haiku y consulta el grafo para responder.</p>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>Flujo de Datos</h2>
+                    <ol class="project-flow">
+                        <li><strong>Ingesta:</strong> Recepción de documentos, hojas de cálculo, imágenes y transcripciones.</li>
+                        <li><strong>Procesamiento:</strong> Limpieza y transformación en la arquitectura Bronze, Silver y Gold.</li>
+                        <li><strong>Extracción:</strong> OCR, análisis contextual y procesamiento analítico tabular.</li>
+                        <li><strong>Representación:</strong> Generación de embeddings y construcción del grafo de entidades.</li>
+                        <li><strong>Consulta:</strong> Respuestas contextualizadas desde el grafo con trazabilidad a la fuente.</li>
+                    </ol>
+                </div>
+
+                <div class="content-section">
+                    <h2>Casos de Uso</h2>
+                    <div class="features-grid">
+                        <article class="feature-item">
+                            <i class="fas fa-folder-open"></i>
+                            <h3>Búsqueda de ubicaciones</h3>
+                            <p>“¿En qué carpeta se encuentra guardado el archivo X o la última versión del presupuesto?”</p>
+                        </article>
+                        <article class="feature-item">
+                            <i class="fas fa-users"></i>
+                            <h3>Memoria de reuniones</h3>
+                            <p>“¿Qué temas y acuerdos se hablaron en la última reunión de Google Meet sobre el proyecto Y?”</p>
+                        </article>
+                        <article class="feature-item">
+                            <i class="fas fa-file-circle-question"></i>
+                            <h3>Cruce documental</h3>
+                            <p>“Resume los puntos clave relacionados con el proveedor Z en informes, excels e imágenes.”</p>
+                        </article>
+                        <article class="feature-item">
+                            <i class="fas fa-magnifying-glass-chart"></i>
+                            <h3>Trazabilidad</h3>
+                            <p>Respuestas fundamentadas en el grafo que señalan el contexto exacto de cada documento origen.</p>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>Impacto y Resultados</h2>
+                    <ul>
+                        <li><strong>Centralización del conocimiento:</strong> Unificación de información no estructurada y estructurada en un solo punto de consulta.</li>
+                        <li><strong>Reducción de tiempos de búsqueda:</strong> Acceso inmediato a documentos específicos y contexto histórico mediante lenguaje natural.</li>
+                        <li><strong>Escalabilidad:</strong> Base preparada para incorporar nueva documentación sin perder relaciones ni contexto histórico.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <aside class="project-sidebar">
+                <div class="sidebar-section">
+                    <h3>Información del Proyecto</h3>
+                    <div class="info-item">
+                        <strong>Categoría:</strong>
+                        <span>IA &amp; Datos</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Tipo:</strong>
+                        <span>GraphRAG</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Estado:</strong>
+                        <span>Implementado</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Tecnologías Utilizadas</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">Neo4j</span>
+                        <span class="tech-tag">DuckDB</span>
+                        <span class="tech-tag">Graphiti</span>
+                        <span class="tech-tag">Voyage AI</span>
+                        <span class="tech-tag">Claude Haiku</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <section class="related-projects">
+        <div class="container">
+            <h2>Proyectos Relacionados</h2>
+            <div class="related-grid">
+                <a href="proyecto-2.html" class="related-card">
+                    <img src="../img/proyectos/proyecto2.jpg" alt="App Gestión de Billar">
+                    <h3>App Gestión de Billar</h3>
+                </a>
+                <a href="proyecto-3.html" class="related-card">
+                    <img src="../img/proyectos/proyecto3.jpg" alt="Página Web Psicóloga">
+                    <h3>Página Web Psicóloga</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-cta">
+        <div class="container">
+            <h2>¿Interesado en trabajar juntos?</h2>
+            <a href="../contacto.html" class="btn btn-primary">Contactar</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Joel CARHUACHIN. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
