@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipeline ETL Medallion | Joel CARHUACHIN</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/proyecto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <img src="../img/LOGO.png" width="120" alt="Joel CARHUACHIN">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../sobre-mi.html" class="nav-link">Sobre Mí</a></li>
+                <li><a href="../servicios.html" class="nav-link">Servicios</a></li>
+                <li><a href="../portafolio.html" class="nav-link active">Portafolio</a></li>
+                <li><a href="../contacto.html" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="project-header">
+        <div class="container">
+            <a href="../portafolio.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Volver al Portafolio
+            </a>
+            <h1 class="project-title">Pipeline de Datos Medallion: de MongoDB a Analítica OLAP</h1>
+            <p class="project-subtitle">Una solución integral que transforma datos semiestructurados en indicadores listos para explorar mediante dashboards interactivos.</p>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <i class="fas fa-database"></i>
+                    <span>Ingeniería de datos</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-layer-group"></i>
+                    <span>Arquitectura Medallion</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Analítica OLAP</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-hero-image">
+        <div class="container">
+            <img src="../img/Medallion.png" alt="Diagrama de la arquitectura Medallion del pipeline de datos">
+        </div>
+    </section>
+
+    <section class="project-content">
+        <div class="container">
+            <div class="project-main">
+                <div class="content-section">
+                    <h2>Resumen Ejecutivo</h2>
+                    <p>
+                        Pipeline automatizado, desarrollado en Python, que extrae documentos semiestructurados
+                        desde MongoDB y los transforma siguiendo la Arquitectura Medallion. Los datos refinados
+                        se almacenan en DuckDB para su consulta analítica y se exponen mediante una API con
+                        FastAPI para alimentar dashboards interactivos creados con Chart.js.
+                    </p>
+                </div>
+
+                <div class="content-section">
+                    <h2>El Problema</h2>
+                    <p>
+                        MongoDB ofrece flexibilidad para las aplicaciones operativas, pero sus documentos
+                        anidados y esquemas variables dificultan el análisis complejo y pueden hacer costosos
+                        los reportes ejecutados directamente sobre la base transaccional.
+                    </p>
+                    <ul>
+                        <li>Las estructuras anidadas complican las consultas y agregaciones analíticas.</li>
+                        <li>Los reportes sobre el origen pueden competir por recursos con las operaciones de la aplicación.</li>
+                        <li>Los dashboards necesitan datos limpios, tipados y preparados para consultarse con rapidez.</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h2>Capacidades Principales</h2>
+                    <div class="features-grid">
+                        <article class="feature-item">
+                            <i class="fas fa-file-code"></i>
+                            <h3>Transformación de datos</h3>
+                            <p>Aplana documentos JSON anidados, normaliza tipos y aplica reglas de limpieza y calidad.</p>
+                        </article>
+                        <article class="feature-item">
+                            <i class="fas fa-layer-group"></i>
+                            <h3>Capas Bronze, Silver y Gold</h3>
+                            <p>Conserva el dato original, prepara una versión depurada y genera modelos y agregados analíticos.</p>
+                        </article>
+                        <article class="feature-item">
+                            <i class="fas fa-gauge-high"></i>
+                            <h3>Consultas OLAP con DuckDB</h3>
+                            <p>Traslada las consultas analíticas a un motor columnar separado de la carga transaccional.</p>
+                        </article>
+                        <article class="feature-item">
+                            <i class="fas fa-chart-column"></i>
+                            <h3>Indicadores interactivos</h3>
+                            <p>Entrega datos procesados a una API para visualizarlos en gráficos dinámicos con Chart.js.</p>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>Arquitectura de la Solución</h2>
+                    <p>
+                        El flujo separa la ingesta, el procesamiento, el almacenamiento analítico y la
+                        visualización. Así, cada etapa puede evolucionar y escalar sin acoplar los dashboards
+                        directamente a las colecciones operativas de MongoDB.
+                    </p>
+                    <ol class="project-flow">
+                        <li><strong>Origen:</strong> Python se conecta a MongoDB e ingesta documentos JSON/BSON de las colecciones seleccionadas.</li>
+                        <li><strong>Bronze:</strong> Guarda una copia de los datos crudos para conservar su trazabilidad y respaldo histórico.</li>
+                        <li><strong>Silver:</strong> Trata valores nulos, aplana estructuras anidadas, normaliza tipos y valida reglas de calidad.</li>
+                        <li><strong>Gold:</strong> Modela y agrega los datos para preparar tablas de análisis y el cálculo de indicadores.</li>
+                        <li><strong>Exposición:</strong> DuckDB almacena las tablas analíticas y FastAPI ofrece endpoints que las sirven como JSON.</li>
+                        <li><strong>Visualización:</strong> Chart.js consume la API y presenta métricas y tendencias en gráficos interactivos.</li>
+                    </ol>
+                </div>
+
+                <div class="content-section">
+                    <h2>Impacto y Beneficios</h2>
+                    <ul>
+                        <li><strong>Datos trazables:</strong> La separación en capas permite seguir el recorrido desde el dato crudo hasta el indicador.</li>
+                        <li><strong>Menor carga analítica en el origen:</strong> Los reportes consultan DuckDB en lugar de competir directamente por recursos con las operaciones de MongoDB.</li>
+                        <li><strong>Análisis ágil:</strong> El almacenamiento columnar y una API dedicada están orientados a servir resultados analíticos con baja latencia.</li>
+                        <li><strong>Diseño modular:</strong> Se pueden incorporar nuevas colecciones o fuentes sin rehacer la capa de visualización.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <aside class="project-sidebar">
+                <div class="sidebar-section">
+                    <h3>Información del Proyecto</h3>
+                    <div class="info-item">
+                        <strong>Categoría:</strong>
+                        <span>Ingeniería de datos</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Tipo:</strong>
+                        <span>Pipeline ETL / OLAP</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Arquitectura:</strong>
+                        <span>Medallion</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Tecnologías Utilizadas</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">DuckDB</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">Chart.js</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <section class="related-projects">
+        <div class="container">
+            <h2>Proyectos Relacionados</h2>
+            <div class="related-grid">
+                <a href="proyecto-1.html" class="related-card">
+                    <img src="../img/graphrag.png" alt="Asistente Inteligente GraphRAG">
+                    <h3>Asistente Inteligente GraphRAG</h3>
+                </a>
+                <a href="proyecto-2.html" class="related-card">
+                    <img src="../img/Gestion-archivos.png" alt="Sistema de Gestión Documental">
+                    <h3>Gestión Documental y Grafo de Conocimiento</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-cta">
+        <div class="container">
+            <h2>¿Interesado en trabajar juntos?</h2>
+            <a href="../contacto.html" class="btn btn-primary">Contactar</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Anthony CARHUACHIN. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

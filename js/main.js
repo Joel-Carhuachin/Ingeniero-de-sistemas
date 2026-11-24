@@ -379,7 +379,7 @@ function createBackToTopButton() {
         right: 30px;
         width: 50px;
         height: 50px;
-        background: linear-gradient(135deg, #2563eb, #1e40af);
+        background: #0E5673;
         color: white;
         border: none;
         border-radius: 50%;
